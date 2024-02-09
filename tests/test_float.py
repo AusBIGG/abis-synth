@@ -11,7 +11,7 @@ def test_basic_rdf():
     rdf = Float(Literal(42, datatype=XSD.double)).to_graph()
 
     assert (None, RDF.type, OWL.Class) not in rdf
-    assert (None, RDF.type, TERN.Value) not in rdf
+    assert (None, RDF.type, TERN.Value) in rdf
     assert (None, RDF.type, TERN.Float) in rdf
 
 

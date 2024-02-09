@@ -8,15 +8,6 @@ from rdflib import Graph
 from shapely.geometry import box
 
 SCENARIOS = ["broad", "degree", "narrow", "embargoed", "conservation"]
-MESSAGE_TYPES = ["create", "update", "delete", "exists"]
-
-
-def post_rdf_to_gateway(g: Graph):
-    return httpx.post(
-        "http://bdrgateway.surroundaustralia.com/validate",
-        data=g.serialize(),
-        headers={"Accept": "application/json"},
-    )
 
 
 def validate_number(value):
@@ -44,13 +35,6 @@ def process_args():
         help="The number of Samplings you want to synthesise data for",
         type=validate_number,
         required=False
-    )
-
-    parser.add_argument(
-        "-m",
-        "--msgtype",
-        help="The type of message to wrap the data in",
-        choices=MESSAGE_TYPES,
     )
 
     return parser.parse_args()

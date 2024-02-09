@@ -29,39 +29,6 @@ def validate_object_id(object_id):
             raise ValueError("The supplied object_id must be an all-capitals string")
 
 
-# This function is not used: it was originally written to get classes and to be used
-# alongside a method to get properties, but then it was decided that a single function
-# to get everything in the namespace, get_target_namespace_elements(), was both simper
-# and better covered all namespace elements, so that function is used instead.
-#
-# def get_classes(g, target_namespace):
-#     namespaces = {"dcterms": DCTERMS, "owl": OWL, "rdfs": RDFS, "skos": SKOS}
-#     q = """
-#         SELECT DISTINCT ?x ?def
-#         WHERE {
-#             # anything that is an instance of owl:Class or rdfs:Class
-#             # or any subclass of them
-#             VALUES ?c { owl:Class rdfs:Class }
-#             ?x rdfs:subClassOf*/a ?c .
-#
-#             # get any definitions, if they have one
-#             OPTIONAL {
-#                 ?x rdfs:comment|dcterms:description|skos:definition ?def
-#             }
-#
-#             # only get results for the targetted namespace (supplied by user)
-#             FILTER STRSTARTS(STR(?x), "xxx")
-#         }
-#         """.replace("xxx", target_namespace)
-#     classes = []
-#     for r in g.query(q, initNs=namespaces):
-#         classes.append((str(r[0]), str(r[1])))
-#
-#     classes.sort(key=lambda tup: tup[1])
-#
-#     return classes
-
-
 def get_target_namespace_elements(g, target_namespace):
     namespaces = {"dcterms": DCTERMS, "owl": OWL, "rdfs": RDFS, "skos": SKOS}
     q = """
