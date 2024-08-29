@@ -3991,64 +3991,64 @@
     tern:hasSiteVisit <http://example.com/sitevisit/8badd0c8-2f60-4d2e-8138-3280aa582bbc> ;
     tern:resultDateTime "2000-01-01"^^xsd:date .
 
-<http://example.com/rdfdataset/05360a26-2bdd-4472-a2d8-1a6f996de066> rdfs:label "RDF Dataset with ID 05360a26-2bdd-4472-a2d8-1a6f996de066" ;
+<http://example.com/dataset/05360a26-2bdd-4472-a2d8-1a6f996de066> rdfs:label "RDF Dataset with ID 05360a26-2bdd-4472-a2d8-1a6f996de066" ;
     dcterms:title "RDF Dataset with ID 05360a26-2bdd-4472-a2d8-1a6f996de066" .
 
-<http://example.com/rdfdataset/1ab59b18-da02-4d45-993f-0642d84773d3> rdfs:label "RDF Dataset with ID 1ab59b18-da02-4d45-993f-0642d84773d3" ;
+<http://example.com/dataset/1ab59b18-da02-4d45-993f-0642d84773d3> rdfs:label "RDF Dataset with ID 1ab59b18-da02-4d45-993f-0642d84773d3" ;
     dcterms:title "RDF Dataset with ID 1ab59b18-da02-4d45-993f-0642d84773d3" .
 
-<http://example.com/rdfdataset/2005be66-8961-4694-a873-b77a069c52d9> rdfs:label "RDF Dataset with ID 2005be66-8961-4694-a873-b77a069c52d9" ;
+<http://example.com/dataset/2005be66-8961-4694-a873-b77a069c52d9> rdfs:label "RDF Dataset with ID 2005be66-8961-4694-a873-b77a069c52d9" ;
     dcterms:title "RDF Dataset with ID 2005be66-8961-4694-a873-b77a069c52d9" .
 
-<http://example.com/rdfdataset/29021809-a33f-4e7d-9e99-879cf3a7af88> rdfs:label "RDF Dataset with ID 29021809-a33f-4e7d-9e99-879cf3a7af88" ;
+<http://example.com/dataset/29021809-a33f-4e7d-9e99-879cf3a7af88> rdfs:label "RDF Dataset with ID 29021809-a33f-4e7d-9e99-879cf3a7af88" ;
     dcterms:title "RDF Dataset with ID 29021809-a33f-4e7d-9e99-879cf3a7af88" .
 
-<http://example.com/rdfdataset/3c21d5ee-6fb0-4184-948d-46562be97ec2> rdfs:label "RDF Dataset with ID 3c21d5ee-6fb0-4184-948d-46562be97ec2" ;
+<http://example.com/dataset/3c21d5ee-6fb0-4184-948d-46562be97ec2> rdfs:label "RDF Dataset with ID 3c21d5ee-6fb0-4184-948d-46562be97ec2" ;
     dcterms:title "RDF Dataset with ID 3c21d5ee-6fb0-4184-948d-46562be97ec2" .
 
-<http://example.com/rdfdataset/4608e754-08dd-444e-a8a9-e7bda152fc40> rdfs:label "RDF Dataset with ID 4608e754-08dd-444e-a8a9-e7bda152fc40" ;
+<http://example.com/dataset/4608e754-08dd-444e-a8a9-e7bda152fc40> rdfs:label "RDF Dataset with ID 4608e754-08dd-444e-a8a9-e7bda152fc40" ;
     dcterms:title "RDF Dataset with ID 4608e754-08dd-444e-a8a9-e7bda152fc40" .
 
-<http://example.com/rdfdataset/78afbef2-61d5-4b53-b905-3e1755277f8d> rdfs:label "RDF Dataset with ID 78afbef2-61d5-4b53-b905-3e1755277f8d" ;
+<http://example.com/dataset/78afbef2-61d5-4b53-b905-3e1755277f8d> rdfs:label "RDF Dataset with ID 78afbef2-61d5-4b53-b905-3e1755277f8d" ;
     dcterms:title "RDF Dataset with ID 78afbef2-61d5-4b53-b905-3e1755277f8d" .
 
-<http://example.com/rdfdataset/832ade22-f757-4002-952f-70fbc94b2f57> rdfs:label "RDF Dataset with ID 832ade22-f757-4002-952f-70fbc94b2f57" ;
+<http://example.com/dataset/832ade22-f757-4002-952f-70fbc94b2f57> rdfs:label "RDF Dataset with ID 832ade22-f757-4002-952f-70fbc94b2f57" ;
     dcterms:title "RDF Dataset with ID 832ade22-f757-4002-952f-70fbc94b2f57" .
 
-<http://example.com/rdfdataset/837ba366-b53f-4c8b-be97-f332a9259fd2> rdfs:label "RDF Dataset with ID 837ba366-b53f-4c8b-be97-f332a9259fd2" ;
+<http://example.com/dataset/837ba366-b53f-4c8b-be97-f332a9259fd2> rdfs:label "RDF Dataset with ID 837ba366-b53f-4c8b-be97-f332a9259fd2" ;
     dcterms:title "RDF Dataset with ID 837ba366-b53f-4c8b-be97-f332a9259fd2" .
 
-<http://example.com/rdfdataset/8cb13c9d-1cd4-4b0d-a70c-ad13b15f6f36> rdfs:label "RDF Dataset with ID 8cb13c9d-1cd4-4b0d-a70c-ad13b15f6f36" ;
+<http://example.com/dataset/8cb13c9d-1cd4-4b0d-a70c-ad13b15f6f36> rdfs:label "RDF Dataset with ID 8cb13c9d-1cd4-4b0d-a70c-ad13b15f6f36" ;
     dcterms:title "RDF Dataset with ID 8cb13c9d-1cd4-4b0d-a70c-ad13b15f6f36" .
 
-<http://example.com/rdfdataset/8fcd7797-8484-4e25-9206-c6eb021de798> rdfs:label "RDF Dataset with ID 8fcd7797-8484-4e25-9206-c6eb021de798" ;
+<http://example.com/dataset/8fcd7797-8484-4e25-9206-c6eb021de798> rdfs:label "RDF Dataset with ID 8fcd7797-8484-4e25-9206-c6eb021de798" ;
     dcterms:title "RDF Dataset with ID 8fcd7797-8484-4e25-9206-c6eb021de798" .
 
-<http://example.com/rdfdataset/92746c99-4c13-468c-8db2-0208857cc809> rdfs:label "RDF Dataset with ID 92746c99-4c13-468c-8db2-0208857cc809" ;
+<http://example.com/dataset/92746c99-4c13-468c-8db2-0208857cc809> rdfs:label "RDF Dataset with ID 92746c99-4c13-468c-8db2-0208857cc809" ;
     dcterms:title "RDF Dataset with ID 92746c99-4c13-468c-8db2-0208857cc809" .
 
-<http://example.com/rdfdataset/a23c15bc-ffd1-4ea4-b747-d28da0156daa> rdfs:label "RDF Dataset with ID a23c15bc-ffd1-4ea4-b747-d28da0156daa" ;
+<http://example.com/dataset/a23c15bc-ffd1-4ea4-b747-d28da0156daa> rdfs:label "RDF Dataset with ID a23c15bc-ffd1-4ea4-b747-d28da0156daa" ;
     dcterms:title "RDF Dataset with ID a23c15bc-ffd1-4ea4-b747-d28da0156daa" .
 
-<http://example.com/rdfdataset/a4b54579-4abb-487b-8e71-9c9d933f8c17> rdfs:label "RDF Dataset with ID a4b54579-4abb-487b-8e71-9c9d933f8c17" ;
+<http://example.com/dataset/a4b54579-4abb-487b-8e71-9c9d933f8c17> rdfs:label "RDF Dataset with ID a4b54579-4abb-487b-8e71-9c9d933f8c17" ;
     dcterms:title "RDF Dataset with ID a4b54579-4abb-487b-8e71-9c9d933f8c17" .
 
-<http://example.com/rdfdataset/b8429022-5a1c-44e5-9a58-c25c4ffdb36b> rdfs:label "RDF Dataset with ID b8429022-5a1c-44e5-9a58-c25c4ffdb36b" ;
+<http://example.com/dataset/b8429022-5a1c-44e5-9a58-c25c4ffdb36b> rdfs:label "RDF Dataset with ID b8429022-5a1c-44e5-9a58-c25c4ffdb36b" ;
     dcterms:title "RDF Dataset with ID b8429022-5a1c-44e5-9a58-c25c4ffdb36b" .
 
-<http://example.com/rdfdataset/cfd788c4-5412-4c43-ae31-c6e45ffa82b9> rdfs:label "RDF Dataset with ID cfd788c4-5412-4c43-ae31-c6e45ffa82b9" ;
+<http://example.com/dataset/cfd788c4-5412-4c43-ae31-c6e45ffa82b9> rdfs:label "RDF Dataset with ID cfd788c4-5412-4c43-ae31-c6e45ffa82b9" ;
     dcterms:title "RDF Dataset with ID cfd788c4-5412-4c43-ae31-c6e45ffa82b9" .
 
-<http://example.com/rdfdataset/d86c56f3-4901-4a38-9174-de9bb3746357> rdfs:label "RDF Dataset with ID d86c56f3-4901-4a38-9174-de9bb3746357" ;
+<http://example.com/dataset/d86c56f3-4901-4a38-9174-de9bb3746357> rdfs:label "RDF Dataset with ID d86c56f3-4901-4a38-9174-de9bb3746357" ;
     dcterms:title "RDF Dataset with ID d86c56f3-4901-4a38-9174-de9bb3746357" .
 
-<http://example.com/rdfdataset/d9dd422e-6ea3-46a6-9346-a58ab395b0cc> rdfs:label "RDF Dataset with ID d9dd422e-6ea3-46a6-9346-a58ab395b0cc" ;
+<http://example.com/dataset/d9dd422e-6ea3-46a6-9346-a58ab395b0cc> rdfs:label "RDF Dataset with ID d9dd422e-6ea3-46a6-9346-a58ab395b0cc" ;
     dcterms:title "RDF Dataset with ID d9dd422e-6ea3-46a6-9346-a58ab395b0cc" .
 
-<http://example.com/rdfdataset/ded991ea-43f6-427b-be55-9e7ee89b09c3> rdfs:label "RDF Dataset with ID ded991ea-43f6-427b-be55-9e7ee89b09c3" ;
+<http://example.com/dataset/ded991ea-43f6-427b-be55-9e7ee89b09c3> rdfs:label "RDF Dataset with ID ded991ea-43f6-427b-be55-9e7ee89b09c3" ;
     dcterms:title "RDF Dataset with ID ded991ea-43f6-427b-be55-9e7ee89b09c3" .
 
-<http://example.com/rdfdataset/f08c791d-c3b8-4de5-be95-174ff0c1ee73> rdfs:label "RDF Dataset with ID f08c791d-c3b8-4de5-be95-174ff0c1ee73" ;
+<http://example.com/dataset/f08c791d-c3b8-4de5-be95-174ff0c1ee73> rdfs:label "RDF Dataset with ID f08c791d-c3b8-4de5-be95-174ff0c1ee73" ;
     dcterms:title "RDF Dataset with ID f08c791d-c3b8-4de5-be95-174ff0c1ee73" .
 
 <http://example.com/concept/0ba1997f-4ea0-49ad-b15a-6ded9b9e47f9> a skos:Concept ;
@@ -9043,7 +9043,7 @@
     rdfs:label "Consultant X" ;
     schema:name "Consultant X" .
 
-<http://example.com/dataset/01> a tern:RDFDataset ;
+<http://example.com/dataset/01> a tern:Dataset ;
     rdfs:label "Dataset Title 01" ;
     dcterms:created "2022-01-01"^^xsd:date ;
     dcterms:creator <http://example.com/concept/6552802b-3f42-4a1e-bd50-fcc2633d40aa>,
@@ -9054,7 +9054,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 01" .
 
-<http://example.com/dataset/02> a tern:RDFDataset ;
+<http://example.com/dataset/02> a tern:Dataset ;
     rdfs:label "Dataset Title 02" ;
     dcterms:created "2022-01-02"^^xsd:date ;
     dcterms:creator <http://example.com/concept/1b233d6b-45c2-46a1-8683-9bb4a3f0688c>,
@@ -9065,7 +9065,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 02" .
 
-<http://example.com/dataset/03> a tern:RDFDataset ;
+<http://example.com/dataset/03> a tern:Dataset ;
     rdfs:label "Dataset Title 03" ;
     dcterms:created "2022-01-03"^^xsd:date ;
     dcterms:creator <http://example.com/concept/2b5db51a-2e93-41fe-b461-d1dade674266>,
@@ -9076,7 +9076,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 03" .
 
-<http://example.com/dataset/05> a tern:RDFDataset ;
+<http://example.com/dataset/05> a tern:Dataset ;
     rdfs:label "Dataset Title 05" ;
     dcterms:created "2022-01-05"^^xsd:date ;
     dcterms:creator <http://example.com/concept/bfba6ec7-cc54-4766-9e08-a8568d688646>,
@@ -9088,7 +9088,7 @@
     dcterms:title "Dataset Title 05" ;
     abisdm:embargoEndDate "2022-10-05"^^xsd:date .
 
-<http://example.com/dataset/07> a tern:RDFDataset ;
+<http://example.com/dataset/07> a tern:Dataset ;
     rdfs:label "Dataset Title 07" ;
     dcterms:created "2022-01-07"^^xsd:date ;
     dcterms:creator <http://example.com/concept/5f4d7093-79cf-4e3f-98a2-12952202e7ec>,
@@ -9099,7 +9099,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 07" .
 
-<http://example.com/dataset/04> a tern:RDFDataset ;
+<http://example.com/dataset/04> a tern:Dataset ;
     rdfs:label "Dataset Title 04" ;
     dcterms:created "2022-01-04"^^xsd:date ;
     dcterms:creator <http://example.com/concept/249f681a-9722-4391-aedb-9fd25d38b578>,
@@ -9110,7 +9110,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 04" .
 
-<http://example.com/dataset/06> a tern:RDFDataset ;
+<http://example.com/dataset/06> a tern:Dataset ;
     rdfs:label "Dataset Title 06" ;
     dcterms:created "2022-01-06"^^xsd:date ;
     dcterms:creator <http://example.com/concept/a502bf04-81b7-4fc0-b2e3-1e93090734dd>,
@@ -9122,7 +9122,7 @@
     dcterms:title "Dataset Title 06" ;
     abisdm:embargoEndDate "2022-10-06"^^xsd:date .
 
-<http://example.com/dataset/09> a tern:RDFDataset ;
+<http://example.com/dataset/09> a tern:Dataset ;
     rdfs:label "Dataset Title 09" ;
     dcterms:created "2022-01-09"^^xsd:date ;
     dcterms:creator <http://example.com/concept/3d7fdb92-15ac-4c28-984f-14c84b653be7>,
@@ -9133,7 +9133,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 09" .
 
-<http://example.com/dataset/14> a tern:RDFDataset ;
+<http://example.com/dataset/14> a tern:Dataset ;
     rdfs:label "Dataset Title 14" ;
     dcterms:created "2022-01-14"^^xsd:date ;
     dcterms:creator <http://example.com/concept/11b10c4e-0eae-410d-aff1-bbb4e64697b1>,
@@ -9145,7 +9145,7 @@
     dcterms:title "Dataset Title 14" ;
     abisdm:embargoPeriod "P13M"^^xsd:duration .
 
-<http://example.com/dataset/18> a tern:RDFDataset ;
+<http://example.com/dataset/18> a tern:Dataset ;
     rdfs:label "Dataset Title 18" ;
     dcterms:created "2022-01-18"^^xsd:date ;
     dcterms:creator <http://example.com/concept/1e010df0-da2f-451a-b819-46da52808c12>,
@@ -9156,7 +9156,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 18" .
 
-<http://example.com/dataset/08> a tern:RDFDataset ;
+<http://example.com/dataset/08> a tern:Dataset ;
     rdfs:label "Dataset Title 08" ;
     dcterms:created "2022-01-08"^^xsd:date ;
     dcterms:creator <http://example.com/concept/0ba1997f-4ea0-49ad-b15a-6ded9b9e47f9>,
@@ -9168,7 +9168,7 @@
     dcterms:title "Dataset Title 08" ;
     abisdm:embargoPeriod "P7M"^^xsd:duration .
 
-<http://example.com/dataset/10> a tern:RDFDataset ;
+<http://example.com/dataset/10> a tern:Dataset ;
     rdfs:label "Dataset Title 10" ;
     dcterms:created "2022-01-10"^^xsd:date ;
     dcterms:creator <http://example.com/concept/52f51668-93f9-4da9-8c18-fc011d8965f7>,
@@ -9179,7 +9179,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 10" .
 
-<http://example.com/dataset/12> a tern:RDFDataset ;
+<http://example.com/dataset/12> a tern:Dataset ;
     rdfs:label "Dataset Title 12" ;
     dcterms:created "2022-01-12"^^xsd:date ;
     dcterms:creator <http://example.com/concept/3fe46faa-cd27-4ac8-b485-82d96475299f>,
@@ -9190,7 +9190,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 12" .
 
-<http://example.com/dataset/13> a tern:RDFDataset ;
+<http://example.com/dataset/13> a tern:Dataset ;
     rdfs:label "Dataset Title 13" ;
     dcterms:created "2022-01-13"^^xsd:date ;
     dcterms:creator <http://example.com/concept/2d109158-ceec-4782-9594-9fda0b0dc62e>,
@@ -9202,7 +9202,7 @@
     dcterms:title "Dataset Title 13" ;
     abisdm:embargoEndDate "2022-10-13"^^xsd:date .
 
-<http://example.com/dataset/19> a tern:RDFDataset ;
+<http://example.com/dataset/19> a tern:Dataset ;
     rdfs:label "Dataset Title 19" ;
     dcterms:created "2022-01-19"^^xsd:date ;
     dcterms:creator <http://example.com/concept/6a591c53-8761-4ecb-a483-ac7dc79a0124>,
@@ -9214,7 +9214,7 @@
     dcterms:title "Dataset Title 19" ;
     abisdm:embargoEndDate "2022-10-19"^^xsd:date .
 
-<http://example.com/dataset/16> a tern:RDFDataset ;
+<http://example.com/dataset/16> a tern:Dataset ;
     rdfs:label "Dataset Title 16" ;
     dcterms:created "2022-01-16"^^xsd:date ;
     dcterms:creator <http://example.com/concept/dd6c2df5-bcb3-476e-b0d7-f528c1f0e81e>,
@@ -9225,7 +9225,7 @@
     dcterms:publisher <http://example.com/sample/98db422d-18e7-4302-87b3-261ef00af540> ;
     dcterms:title "Dataset Title 16" .
 
-<http://example.com/dataset/17> a tern:RDFDataset ;
+<http://example.com/dataset/17> a tern:Dataset ;
     rdfs:label "Dataset Title 17" ;
     dcterms:created "2022-01-17"^^xsd:date ;
     dcterms:creator <http://example.com/concept/1213dedf-cc96-4a35-a58d-188af5be2c1f>,
@@ -9237,7 +9237,7 @@
     dcterms:title "Dataset Title 17" ;
     abisdm:embargoEndDate "2022-10-17"^^xsd:date .
 
-<http://example.com/dataset/20> a tern:RDFDataset ;
+<http://example.com/dataset/20> a tern:Dataset ;
     rdfs:label "Dataset Title 20" ;
     dcterms:created "2022-01-20"^^xsd:date ;
     dcterms:creator <http://example.com/concept/73ef1448-6833-433d-86bc-2e69226b4abd>,
@@ -9368,7 +9368,7 @@
     sosa:hasSample <http://example.com/sample/514111ac-a2bd-4851-9c93-329ce30d27cc> ;
     tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> .
 
-<http://example.com/dataset/15> a tern:RDFDataset ;
+<http://example.com/dataset/15> a tern:Dataset ;
     rdfs:label "Dataset Title 15" ;
     dcterms:created "2022-01-15"^^xsd:date ;
     dcterms:creator <http://example.com/concept/411b292d-f47a-4587-ba74-707d5317ed82>,
@@ -9380,7 +9380,7 @@
     dcterms:title "Dataset Title 15" ;
     abisdm:embargoEndDate "2022-10-15"^^xsd:date .
 
-<http://example.com/dataset/11> a tern:RDFDataset ;
+<http://example.com/dataset/11> a tern:Dataset ;
     rdfs:label "Dataset Title 11" ;
     dcterms:created "2022-01-11"^^xsd:date ;
     dcterms:creator <http://example.com/concept/4d5711e9-2c51-4e48-b569-d8b04a204b02>,

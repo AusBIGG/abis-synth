@@ -5,7 +5,7 @@ from rdflib.namespace import RDF, RDFS, OWL, VOID
 
 from client.model._TERN import TERN
 from client.model.klass import Klass
-from client.model.rdf_dataset import RDFDataset
+from client.model.tern_dataset import Dataset
 from client.model.value_float import Float
 from client.model.value_taxon import Taxon
 from client.model.value import Value
@@ -19,7 +19,7 @@ class Attribute(Klass):
         has_simple_value: Union[Literal, URIRef],
         has_value: Value,
         is_attribute_of: Union[Float, Taxon, Value],
-        in_dataset: RDFDataset,
+        in_dataset: Dataset,
         iri: Optional[str] = None,
     ):
         assert isinstance(attribute.__class__, URIRef.__class__) >= 1, "You must supply exactly 1 attributes"
@@ -35,8 +35,8 @@ class Attribute(Klass):
         ), "The object supplied for the property is_attribute_of must be of type Float, Taxon or Value"
 
         assert (
-            isinstance(in_dataset.__class__, RDFDataset.__class__)
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            isinstance(in_dataset.__class__, Dataset.__class__)
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         """Receive and use or make an IRI"""
         if iri is None:

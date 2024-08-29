@@ -4,7 +4,7 @@ from rdflib.namespace import OWL, RDF, XSD
 
 from client.model import (
     Concept,
-    RDFDataset,
+    Dataset,
     FeatureOfInterest,
     Observation,
     Site,
@@ -14,10 +14,10 @@ from client.model._TERN import TERN
 
 
 def test_basic_rdf():
-    rdfdataset1 = RDFDataset()
-    foi1 = FeatureOfInterest(Concept(), rdfdataset1)
+    tern_dataset1 = Dataset()
+    foi1 = FeatureOfInterest(Concept(), tern_dataset1)
     obs1 = Observation(
-        rdfdataset1,
+        tern_dataset1,
         Value(),
         foi1,
         Literal("timple result"),
@@ -26,7 +26,7 @@ def test_basic_rdf():
         Literal("2000-01-01", datatype=XSD.date),
         URIRef("http://example.com/procedure/a"),
     )
-    s1 = Site(obs1, [foi1], rdfdataset1, Concept())
+    s1 = Site(obs1, [foi1], tern_dataset1, Concept())
     rdf = s1.to_graph()
 
     assert (None, RDF.type, OWL.Class) not in rdf

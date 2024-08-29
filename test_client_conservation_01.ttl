@@ -99,7 +99,7 @@
     sosa:hasSample <http://example.com/sample/c42b0446-2363-484c-a861-d63f3943e9d5> ;
     tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> .
 
-<http://createme.org/2> a tern:RDFDataset ;
+<http://createme.org/2> a tern:Dataset ;
     rdfs:label "RDF Dataset with ID 9735e603-3f41-4370-861f-c190c9e2d3b8" ;
     dcterms:title "RDF Dataset with ID 9735e603-3f41-4370-861f-c190c9e2d3b8" .
 

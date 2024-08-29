@@ -7,7 +7,7 @@ from client.model._TERN import TERN
 from client.model.concept import Concept
 from client.model.feature_of_interest import FeatureOfInterest
 from client.model.klass import Klass
-from client.model.rdf_dataset import RDFDataset
+from client.model.tern_dataset import Dataset
 from client.model.site import Site
 
 
@@ -16,7 +16,7 @@ class Sample(Klass):
         self,
         is_sample_of: List[Union[FeatureOfInterest, Site]],
         feature_type: Concept,
-        in_dataset: RDFDataset,
+        in_dataset: Dataset,
         is_result_of: Union["Sampling", None],
         iri: Optional[str] = None,
     ):
@@ -36,8 +36,8 @@ class Sample(Klass):
         ), "The object supplied for the property feature_type must be of type Concept"
 
         assert isinstance(
-            in_dataset.__class__, RDFDataset.__class__
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            in_dataset.__class__, Dataset.__class__
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         """Receive and use or make an IRI"""
         if iri is None:

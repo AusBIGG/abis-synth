@@ -3,7 +3,7 @@ from rdflib.namespace import OWL, RDF, XSD
 
 from client.model import (
     Concept,
-    RDFDataset,
+    Dataset,
     FeatureOfInterest,
     Value,
     Observation,
@@ -13,14 +13,14 @@ from client.model._TERN import TERN
 
 # TODO: Confirm this testing is sufficient
 def test_basic_rdf():
-    rdfdataset1 = RDFDataset()
+    tern_dataset1 = Dataset()
     foi1 = FeatureOfInterest(
         Concept(),
-        rdfdataset1,
+        tern_dataset1,
     )
 
     s1 = Observation(
-        rdfdataset1,
+        tern_dataset1,
         Value(),
         foi1,
         URIRef("https://example.com/simpleresult/x"),

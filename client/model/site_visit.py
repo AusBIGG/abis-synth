@@ -5,20 +5,20 @@ from rdflib.namespace import RDF, RDFS, OWL, VOID, PROV, XSD
 
 from client.model._TERN import TERN
 from client.model.klass import Klass
-from client.model.rdf_dataset import RDFDataset
+from client.model.tern_dataset import Dataset
 
 
 class SiteVisit(Klass):
     def __init__(
         self,
-        in_dataset: RDFDataset,
+        in_dataset: Dataset,
         started_at_time: Literal,
         iri: Optional[str] = None,
         label: Optional[Literal] = None,
     ):
         assert (
-            type(in_dataset) == RDFDataset
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            type(in_dataset) == Dataset
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         assert (
             type(started_at_time) == Literal

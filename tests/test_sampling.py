@@ -1,19 +1,19 @@
 from rdflib import Literal, URIRef, Namespace
 from rdflib.namespace import OWL, RDF, XSD
 
-from client.model import Concept, FeatureOfInterest, RDFDataset, Sample, Sampling
+from client.model import Concept, FeatureOfInterest, Dataset, Sample, Sampling
 from client.model._TERN import TERN
 GEO = Namespace("http://www.opengis.net/ont/geosparql#")
 from shapely.geometry import Point
 
 
 def test_basic_rdf():
-    rdfdataset1 = RDFDataset()
+    tern_dataset1 = Dataset()
     foi1 = FeatureOfInterest(
         Concept(),
-        rdfdataset1,
+        tern_dataset1,
     )
-    sample1 = Sample([foi1], Concept(), rdfdataset1, None)
+    sample1 = Sample([foi1], Concept(), tern_dataset1, None)
     s1 = Sampling(
         foi1,
         Literal("2001-01-01", datatype=XSD.date),
@@ -30,7 +30,7 @@ def test_basic_rdf():
 
 
 def test_coordinates_point():
-    ds = RDFDataset()
+    ds = Dataset()
     foi1 = FeatureOfInterest(
         Concept(),
         ds,

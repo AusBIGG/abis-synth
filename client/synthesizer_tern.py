@@ -49,7 +49,7 @@ SCIENTIFIC_NAME_IDS = [
 
 
 class TernSynthesizer:
-    datasets: List[RDFDataset]
+    datasets: List[Dataset]
     fois = List[FeatureOfInterest]
     sites = List[Site]
     samplings = List[Sampling]
@@ -86,9 +86,9 @@ class TernSynthesizer:
             randomised_or_regular
         )
 
-        # create a list of RDFDataset instances
+        # create a list of tern Dataset instances
         for i in range(math.floor(n / 100) + 1):  # 1 per 100 Samplings
-            self.datasets.append(RDFDataset())
+            self.datasets.append(Dataset())
 
         # create a list of FoI instances: 1 per 50 Samplings
         for i in range(math.floor(n / 50) + 1):

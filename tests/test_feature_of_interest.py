@@ -1,14 +1,14 @@
 from rdflib.namespace import OWL, RDF
 
-from client.model import Concept, RDFDataset, FeatureOfInterest
+from client.model import Concept, Dataset, FeatureOfInterest
 from client.model._TERN import TERN
 
 
 def test_basic_rdf():
-    rdfdataset1 = RDFDataset()
+    dataset1 = Dataset()
     foi1 = FeatureOfInterest(
         Concept(),
-        rdfdataset1,
+        dataset1,
     )
     rdf = foi1.to_graph()
 
