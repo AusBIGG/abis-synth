@@ -7,7 +7,7 @@ from client.model._TERN import TERN
 from client.model.concept import Concept
 from client.model.feature_of_interest import FeatureOfInterest
 from client.model.observation import Observation
-from client.model.rdf_dataset import RDFDataset
+from client.model.tern_dataset import Dataset
 from client.model.site_visit import SiteVisit
 
 
@@ -16,7 +16,7 @@ class Site(FeatureOfInterest):
         self,
         is_result_of: Observation,
         is_sample_of: List[FeatureOfInterest],
-        in_dataset: RDFDataset,
+        in_dataset: Dataset,
         feature_type: Concept,
         iri: Optional[str] = None,
         label: Optional[Literal] = None,
@@ -32,8 +32,8 @@ class Site(FeatureOfInterest):
         )
 
         assert isinstance(
-            in_dataset.__class__, RDFDataset.__class__
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            in_dataset.__class__, Dataset.__class__
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         assert isinstance(
             feature_type.__class__, Concept.__class__

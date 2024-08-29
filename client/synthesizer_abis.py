@@ -8,7 +8,7 @@ from shapely.geometry import box
 
 from model.agent import Agent
 from model.concept import Concept
-from model.rdf_dataset import RDFDataset
+from model.tern_dataset import Dataset
 from model._TERN import TERN
 from model.types_conservation_status_taxa import CONSERVATION_STATUS_TAXA
 from synthesizer_tern import TernSynthesizer
@@ -121,7 +121,7 @@ class AbisSynthesizer:
             for i in range(20):
                 dataset_iri = f"http://example.com/dataset/{str(i+1).zfill(2)}"
                 # Create a TERN Dataset
-                d = RDFDataset(
+                d = Dataset(
                     dataset_iri,
                     titles[i],
                     descriptions[i],
@@ -155,15 +155,15 @@ class AbisSynthesizer:
                 tern_graph = TernSynthesizer(10, box(116 + x, -32 + y, 116 + x + 1, -28 + y + 1), "randomised").to_graph()
                 u = """
                     DELETE {
-                        ?d a tern:RDFDataset .
+                        ?d a tern:Dataset .
                         ?x ?y ?d .
                     }
                     INSERT {
-                        <xx> a tern:RDFDataset .
+                        <xx> a tern:Dataset .
                         ?x ?y <xx> .                    
                     }
                     WHERE {
-                        ?d a tern:RDFDataset .
+                        ?d a tern:Dataset .
                         ?x ?y ?d .                    
                     }                     
                 """.replace("xx", dataset_iri)

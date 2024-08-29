@@ -10,7 +10,7 @@ from client.model.concept import Concept
 import re
 
 
-class RDFDataset(Klass):
+class Dataset(Klass):
     def __init__(
         self,
         iri: Optional[str] = None,
@@ -68,7 +68,7 @@ class RDFDataset(Klass):
         """Receive and use or make an IRI"""
         if iri is None:
             self.id = self.make_uuid()
-            iri = URIRef(f"http://example.com/rdfdataset/{self.id}")
+            iri = URIRef(f"http://example.com/dataset/{self.id}")
 
         self.iri = URIRef(iri)
 
@@ -103,7 +103,7 @@ class RDFDataset(Klass):
     def to_graph(self) -> Graph:
         g = super().to_graph()
         g.remove((self.iri, RDF.type, OWL.Class))
-        g.add((self.iri, RDF.type, TERN.RDFDataset))
+        g.add((self.iri, RDF.type, TERN.Dataset))
         g.remove((self.iri, RDFS.label, None))
         g.add((self.iri, RDFS.label, Literal(self.label)))
 

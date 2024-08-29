@@ -6,14 +6,14 @@ from rdflib.namespace import RDF, RDFS, SOSA, OWL, VOID
 from client.model._TERN import TERN
 from client.model.concept import Concept
 from client.model.klass import Klass
-from client.model.rdf_dataset import RDFDataset
+from client.model.tern_dataset import Dataset
 
 
 class FeatureOfInterest(Klass):
     def __init__(
             self,
             feature_type: Concept,
-            in_dataset: RDFDataset,
+            in_dataset: Dataset,
             iri: Optional[str] = None,
             has_sample: Optional["Sample"] = None,
     ):
@@ -22,8 +22,8 @@ class FeatureOfInterest(Klass):
         ), f"The object supplied for the property feature_type must be of type Concept. You gave a {type(feature_type)}"
 
         assert isinstance(
-            in_dataset.__class__, RDFDataset.__class__
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            in_dataset.__class__, Dataset.__class__
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         # Unsure why Sample goes red TODO: Figure out why Sample is going red without importing
         # importing seems to trigger a circular ImportError

@@ -6,7 +6,7 @@ from rdflib.namespace import RDF, RDFS, OWL, VOID, SOSA, TIME, XSD
 from client.model._TERN import TERN
 from client.model.feature_of_interest import FeatureOfInterest
 from client.model.klass import Klass
-from client.model.rdf_dataset import RDFDataset
+from client.model.tern_dataset import Dataset
 from client.model.value import Value
 from client.model.value_taxon import Taxon
 from client.model.site_visit import SiteVisit
@@ -15,7 +15,7 @@ from client.model.site_visit import SiteVisit
 class Observation(Klass):
     def __init__(
         self,
-        in_dataset: RDFDataset,
+        in_dataset: Dataset,
         has_result: Union[Value, Taxon],
         has_feature_of_interest: Union[FeatureOfInterest, "Sample"],
         has_simple_result: Union[URIRef, Literal],
@@ -27,8 +27,8 @@ class Observation(Klass):
         has_site_visit: Optional[SiteVisit] = None,
     ):
         assert isinstance(
-            in_dataset.__class__, RDFDataset.__class__
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            in_dataset.__class__, Dataset.__class__
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         assert isinstance(
             has_result.__class__, Value.__class__
@@ -59,8 +59,8 @@ class Observation(Klass):
         ), "There must be exactly 1 used_procedure property"
 
         assert isinstance(
-            in_dataset.__class__, RDFDataset.__class__
-        ), "The object supplied for the property in_dataset must be of type RDFDataset"
+            in_dataset.__class__, Dataset.__class__
+        ), "The object supplied for the property in_dataset must be of type Dataset"
 
         if has_site_visit:
             assert isinstance(has_site_visit.__class__, SiteVisit.__class__), \

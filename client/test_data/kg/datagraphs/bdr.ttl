@@ -22,7 +22,7 @@
 .
 
 <dataset/fake>
-    a tern:RDFDataset ;
+    a tern:Dataset ;
     dcterms:title "Fake Dataset" ;
     dcterms:description "Just a fake dataset for testing" ;
     dcterms:issued "2022-01-20"^^xsd:date ;
