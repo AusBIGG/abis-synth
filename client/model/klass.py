@@ -8,16 +8,16 @@ from client.model._TERN import TERN
 
 
 class Klass:
-    iri = None
+    iri: URIRef
 
     def __init__(self, iri: Optional[str] = None):
         """Receive and use or make an IRI"""
         if iri is None:
-            self.id = self.make_uuid()
-            iri = URIRef(f"http://example.com/{self.id}")
+            self.uuid = self.make_uuid()
+            iri = URIRef(f"http://example.com/{self.uuid}")
 
         self.iri = URIRef(iri)
-        self.label = f"Class with ID {self.id if hasattr(self, 'id') else self.iri.split('/')[-1]}"
+        self.label = f"Class with ID {self.uuid if hasattr(self, 'uuid') else self.iri.split('/')[-1]}"
 
     def make_uuid(self):
         return uuid4()

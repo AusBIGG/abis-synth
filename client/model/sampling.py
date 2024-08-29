@@ -6,12 +6,11 @@ from rdflib.namespace import RDF, RDFS, SOSA, OWL, XSD
 GEO = Namespace("http://www.opengis.net/ont/geosparql#")
 
 from client.model._TERN import TERN
-from client.model.feature_of_interest import FeatureOfInterest
-from client.model.klass import Klass
-from client.model.sample import Sample
-from client.model.site import Site
+import client.model as model
+from .feature_of_interest import FeatureOfInterest
+from .klass import Klass
 from shapely.geometry import Point
-from client.model.site_visit import SiteVisit
+from .site_visit import SiteVisit
 
 
 class Sampling(Klass):
@@ -20,7 +19,7 @@ class Sampling(Klass):
         has_feature_of_interest: FeatureOfInterest,
         result_date_time: Literal,
         used_procedure: URIRef,
-        has_result: List[Sample] = [],
+        has_result: List["model.Sample"] = [],
         iri: Optional[str] = None,
         geometry: Optional[Point] = None,
         has_site_visit: Optional[SiteVisit] = None
@@ -48,7 +47,7 @@ class Sampling(Klass):
 
         if len(has_result) > 0:
             assert all(
-                isinstance(el.__class__, Sample.__class__) for el in has_result
+                isinstance(el.__class__, model.Sample.__class__) for el in has_result
             ), "Every value supplied for has_result must be of type Sample"
 
         if geometry is not None:
@@ -64,9 +63,7 @@ class Sampling(Klass):
             self.id = self.make_uuid()
             iri = URIRef(f"http://example.com/sampling/{self.id}")
 
-        self.iri = URIRef(iri)
-
-        super().__init__(iri)
+        super().__init__(iri)  # this sets self.iri = iri
 
         self.label = f"Sampling with ID {self.id if hasattr(self, 'id') else self.iri.split('/')[-1]}"
 
