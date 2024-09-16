@@ -4,12 +4,13 @@ from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.namespace import RDF, RDFS, OWL, VOID, SOSA, TIME, XSD
 
 from client.model._TERN import TERN
-from client.model.feature_of_interest import FeatureOfInterest
-from client.model.klass import Klass
-from client.model.tern_dataset import Dataset
-from client.model.value import Value
-from client.model.value_taxon import Taxon
-from client.model.site_visit import SiteVisit
+import client.model as model
+from .feature_of_interest import FeatureOfInterest
+from .klass import Klass
+from .tern_dataset import Dataset
+from .value import Value
+from .value_taxon import Taxon
+from .site_visit import SiteVisit
 
 
 class Observation(Klass):
@@ -17,7 +18,7 @@ class Observation(Klass):
         self,
         in_dataset: Dataset,
         has_result: Union[Value, Taxon],
-        has_feature_of_interest: Union[FeatureOfInterest, "Sample"],
+        has_feature_of_interest: Union[FeatureOfInterest, "model.Sample"],
         has_simple_result: Union[URIRef, Literal],
         observed_property: URIRef,
         phenomenon_time: URIRef,
@@ -68,13 +69,16 @@ class Observation(Klass):
                     "and has a maximum of 1 supplied properties"
 
         """Receive and use or make an IRI"""
+        self.uuid = self.make_uuid()
         if iri is None:
-            self.id = self.make_uuid()
-            iri = URIRef(f"http://example.com/observation/{self.id}")
+            ds_id = in_dataset.use_identifier
+            iri = URIRef(f"https://synthetic.data.gov.au/dataset/bdr/{ds_id}/observation/{self.uuid}")
+            self.use_identifier = self.uuid
+        else:
+            self.use_identifier = iri.rsplit('/', 1)[-1]
 
-        self.iri = URIRef(iri)
-        super().__init__(iri)
-        self.label = f"Observation with ID {self.id if hasattr(self, 'id') else self.iri.split('/')[-1]}"
+        super().__init__(iri) # self.iri is set in the super class
+        self.label = f"Observation with ID {self.use_identifier}"
         self.in_dataset = in_dataset
         self.has_result = has_result
         self.has_feature_of_interest = has_feature_of_interest
@@ -100,8 +104,8 @@ class Observation(Klass):
         g.add((self.iri, SOSA.hasResult, self.has_result.iri))
         g += self.has_result.to_graph()
         g.add((self.iri, SOSA.hasFeatureOfInterest, self.has_feature_of_interest.iri))
-        if (self.has_feature_of_interest.iri, RDF.type, None) not in g:
-            g += self.has_feature_of_interest.to_graph()
+        if (self.has_feature_of_interest.iri, RDF.type, None) not in g: # TODO: work out why this is always false?
+           g += self.has_feature_of_interest.to_graph()
         g.add((self.iri, SOSA.hasSimpleResult, self.has_simple_result))
         g.add((self.iri, SOSA.observedProperty, self.observed_property))
         t = BNode()

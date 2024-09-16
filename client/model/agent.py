@@ -1,7 +1,7 @@
 from typing import Optional, List
 from typing import Literal as Lit
 
-from client.model.klass import Klass
+from .klass import Klass
 
 from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, OWL, SDO

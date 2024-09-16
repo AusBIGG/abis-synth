@@ -50,15 +50,15 @@ SCIENTIFIC_NAME_IDS = [
 
 class TernSynthesizer:
     datasets: List[Dataset]
-    fois = List[FeatureOfInterest]
-    sites = List[Site]
-    samplings = List[Sampling]
-    samples = List[Sample]
-    observations = List[Observation]
-    taxa = List[Taxon]
+    fois: List[FeatureOfInterest]
+    sites: List[Site]
+    samplings: List[Sampling]
+    samples: List[Sample]
+    observations: List[Observation]
+    taxa: List[Taxon]
     coordinate_bounding_box: Polygon
-    coordinate_points = List[Point]
-    site_visit = List[SiteVisit]
+    coordinate_points: List[Point]
+    site_visit: List[SiteVisit]
 
     def __init__(
             self, n: int,

@@ -4,20 +4,21 @@ from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import OWL, RDF, RDFS, SOSA, VOID
 
 from client.model._TERN import TERN
-from client.model.concept import Concept
-from client.model.feature_of_interest import FeatureOfInterest
-from client.model.klass import Klass
-from client.model.tern_dataset import Dataset
-from client.model.site import Site
+import client.model as model
+from .concept import Concept
+from .klass import Klass
+from .tern_dataset import Dataset
+from .site import Site
+
 
 
 class Sample(Klass):
     def __init__(
         self,
-        is_sample_of: List[Union[FeatureOfInterest, Site]],
+        is_sample_of: List[Union["model.FeatureOfInterest", Site]],
         feature_type: Concept,
         in_dataset: Dataset,
-        is_result_of: Union["Sampling", None],
+        is_result_of: Union["model.Sampling", None],
         iri: Optional[str] = None,
     ):
         assert (
@@ -25,11 +26,11 @@ class Sample(Klass):
         ), "You must supply a minimum of 1 FeatureOfInterest objects for the property is_sample_of"
 
         assert all(
-            isinstance(el.__class__, FeatureOfInterest.__class__) for el in is_sample_of
+            isinstance(el.__class__, model.FeatureOfInterest.__class__) for el in is_sample_of
         ), "Every object supplied in the property is_sample_of must be of type FeatureOfInterest"
 
-        # assert type(is_result_of) == Sampling, \
-        #     "The object supplied for the property is_result_of must be of type Sampling"
+        assert isinstance(is_result_of.__class__, model.Sampling.__class__), \
+            "The object supplied for the property is_result_of must be of type Sampling"
 
         assert isinstance(
             feature_type.__class__, Concept.__class__

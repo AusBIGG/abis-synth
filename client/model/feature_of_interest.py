@@ -4,9 +4,10 @@ from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, SOSA, OWL, VOID
 
 from client.model._TERN import TERN
-from client.model.concept import Concept
-from client.model.klass import Klass
-from client.model.tern_dataset import Dataset
+import client.model as model
+from .concept import Concept
+from .klass import Klass
+from .tern_dataset import Dataset
 
 
 class FeatureOfInterest(Klass):
@@ -15,7 +16,7 @@ class FeatureOfInterest(Klass):
             feature_type: Concept,
             in_dataset: Dataset,
             iri: Optional[str] = None,
-            has_sample: Optional["Sample"] = None,
+            has_sample: Optional["model.Sample"] = None,
     ):
         assert isinstance(
             feature_type.__class__, Concept.__class__
@@ -29,7 +30,7 @@ class FeatureOfInterest(Klass):
         # importing seems to trigger a circular ImportError
 
         if has_sample is not None:
-            assert isinstance(Sample.__class__, has_sample.__class__), \
+            assert isinstance(model.Sample.__class__, has_sample.__class__), \
                 f"The object supplied for the property has_sample must be of type Sample "
 
         """Receive and use or make an IRI"""

@@ -4,9 +4,9 @@ from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, OWL, DCTERMS, XSD
 
 from client.model._TERN import TERN
-from client.model.klass import Klass
-from client.model.agent import Agent
-from client.model.concept import Concept
+from .klass import Klass
+from .agent import Agent
+from .concept import Concept
 import re
 
 
@@ -65,20 +65,22 @@ class Dataset(Klass):
                 "If you provide a value for the issued parameter, it must be of type string"
             assert date_pattern.match(issued), "The value for issued you provided is not in the YYYY-MM-DD format"
 
+        self.uuid = self.make_uuid()
+
         """Receive and use or make an IRI"""
         if iri is None:
-            self.id = self.make_uuid()
-            iri = URIRef(f"http://example.com/dataset/{self.id}")
+            iri = URIRef(f"http://example.com/dataset/{self.uuid}")
+            self.use_identifier = str(self.uuid)
+        else:
+            self.use_identifier = iri.split('/')[-1]
 
-        self.iri = URIRef(iri)
+        super().__init__(iri)  # this sets self.iri = iri
 
-        super().__init__(iri)
-        
         if title is not None:
             self.title = title
             self.label = title
         else:
-            self.title = f"RDF Dataset with ID {self.id if hasattr(self, 'id') else self.iri.split('/')[-1]}"
+            self.title = f"RDF Dataset with ID {self.use_identifier}"
             self.label = self.title
 
         if description is not None:
